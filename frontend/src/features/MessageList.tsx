@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
-import { useAppSelector, useAppDispatch } from '../app/hooks';
-import { fetchMessages } from './messagesSlice';
-import MessageItem from '../components/MessageItem.tsx';
-import { Box } from '@mui/material';
+import { useEffect } from "react";
+import { useAppSelector, useAppDispatch } from "../app/hooks";
+import { fetchMessages } from "./messagesSlice";
+import MessageItem from "../components/MessageItem.tsx";
+import { Box } from "@mui/material";
 
 const MessageList = () => {
   const dispatch = useAppDispatch();
@@ -10,15 +10,15 @@ const MessageList = () => {
   const status = useAppSelector((state) => state.messages.status);
 
   useEffect(() => {
-    if (status === 'idle') {
+    if (status === "idle") {
       dispatch(fetchMessages());
     }
   }, [status, dispatch]);
 
   return (
-    <Box sx={{maxWidth: 600, Margin: '0 auto'}}>
+    <Box sx={{ maxWidth: 600, Margin: "0 auto" }}>
       {messages.map((message, index) => (
-        <MessageItem key={index} message={message}/>
+        <MessageItem key={index} message={message} />
       ))}
     </Box>
   );

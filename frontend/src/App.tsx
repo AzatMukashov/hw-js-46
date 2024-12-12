@@ -1,11 +1,11 @@
-import MessageForm from './components/MessageForm.tsx';
-import MessageList from './features/MessageList.tsx';
+import MessageForm from "./components/MessageForm.tsx";
+import MessageList from "./features/MessageList.tsx";
 
 const App = () => (
   <>
-    <MessageForm/>
-    <MessageList/>
+    <MessageForm />
+    <MessageList />
   </>
 );
 
-export default App
+export default App;
